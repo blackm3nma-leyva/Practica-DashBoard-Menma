@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+      <link rel="stylesheet" href="../css/style2.css">
+  </head>
+  <body>
+    <!-----------Navbar----------->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else
+                      here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search"
+                placeholder="Search" aria-label="Search" />
+              <button class="btn btn-outline-success"
+                type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-----------Cards----------->
+    <section>
+
+      <div class="container">
+        <div class="row py-3">
+          <!------Tarjeta 1------>
+          <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+            <div class="card text-bg-success shadow-sm">
+              <div
+                class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <h2 class="mb-0 fw-bold">120</h2>
+                  <p class="text-muted mb-0">Usuarios activos</p>
+                  <hr>
+                  <i class="bi bi-clock-history"></i> Actualizado hace 3 mins
+                </div>
+              </div>
+            </div>
+          </div>
+          <!------Tarjeta 2------>
+          <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+            <div class="card text-bg-success shadow-sm">
+              <div
+                class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <h2 class="mb-0 fw-bold">120</h2>
+                  <p class="text-muted mb-0">Usuarios activos</p>
+                  <hr>
+                  <i class="bi bi-clock-history"></i> Actualizado hace 3 mins
+                </div>
+              </div>
+            </div>
+          </div>
+          <!------Tarjeta 3------>
+          <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+            <div class="card text-bg-success shadow-sm">
+              <div
+                class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <h2 class="mb-0 fw-bold">120</h2>
+                  <p class="text-muted mb-0">Usuarios activos</p>
+                  <hr>
+                  <i class="bi bi-clock-history"></i> Actualizado hace 3 mins
+                </div>
+              </div>
+            </div>
+          </div>
+          <!------Tarjeta 4------>
+          <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+            <div class="card text-bg-success shadow-sm">
+              <div
+                class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <h2 class="mb-0 fw-bold">120</h2>
+                  <p class="text-muted mb-0">Usuarios activos</p>
+                  <hr>
+                  <i class="bi bi-clock-history"></i> Actualizado hace 3 mins
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-----------Graficos----------->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-8 com-sm-12">
+            <div class="card">
+              <div class="card-body text-bg-success">
+                <h2>
+                  <div class="card flex-fill w-100 draggable">
+    <div class="card-header">
+        <h5 class="card-title mb-0">Recent Movement</h5>
+    </div>
+    <div class="card-body py-3">
+        <div class="chart chart-sm"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+            <canvas id="chartjs-dashboard-line" style="display: block; height: 252px; width: 428px;" width="856" height="504" class="chart-line chartjs-render-monitor"></canvas>
+        </div>
+    </div>
+</div>
+
+<script>
+var chartsLine = document.querySelectorAll(".chart-line");
+
+chartsLine.forEach(function(chart) {
+  if (!chart.getAttribute('data-chart-initialized')) {
+      var ctx = chart.getContext("2d");
+
+      var gradient = ctx.createLinearGradient(0, 0, 0, 225);
+      gradient.addColorStop(0, "rgba(215, 227, 244, 1)");
+      gradient.addColorStop(1, "rgba(215, 227, 244, 0)");
+      // Line chart
+      new Chart(ctx, {
+          type: "line",
+          data: {
+              labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+              datasets: [{
+                  label: "Sales ($)",
+                  fill: true,
+                  backgroundColor: gradient,
+                  borderColor: window.theme.primary,
+                  data: [
+                      2115,
+                      1562,
+                      1584,
+                      1892,
+                      1587,
+                      1923,
+                      2566,
+                      2448,
+                      2805,
+                      3438,
+                      2917,
+                      3327
+                  ]
+              }]
+          },
+          options: {
+              maintainAspectRatio: false,
+              legend: {
+                  display: false
+              },
+              tooltips: {
+                  intersect: false
+              },
+              hover: {
+                  intersect: true
+              },
+              plugins: {
+                  filler: {
+                      propagate: false
+                  }
+              },
+              scales: {
+                  xAxes: [{
+                      reverse: true,
+                      gridLines: {
+                          color: "rgba(0,0,0,0.0)"
+                      }
+                  }],
+                  yAxes: [{
+                      ticks: {
+                          stepSize: 1000
+                      },
+                      display: true,
+                      borderDash: [3, 3],
+                      gridLines: {
+                          color: "rgba(0,0,0,0.0)"
+                      }
+                  }]
+              }
+          }
+      });
+      chart.setAttribute("data-chart-initialized", "true");
+  }
+});
+</script>
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 com-sm-12">
+            <div class="card">
+              <div class="card-body text-bg-success">
+                <h2><iframe
+                    src="https://calendar.google.com/calendar/embed?src=blackm3nma%40gmail.com&ctz=America%2FMexico_City"
+                    style="border: 0" width="320" height="320" frameborder="0"
+                    scrolling="no"></iframe></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-----------Tabla----------->
+    <section>
+      <div class="container py-4">
+        <div class="row">
+          <div class="col">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Handle</th>
+                  <th scope="col">Modificar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                  <td>
+                    <a href="../page/doc.html">
+                    <button type="button" class="btn btn-info"><i
+                        class="bi bi-eye-fill"></i></button></a>
+                    <button type="button" class="btn btn-success"><i
+                        class="bi bi-pencil-square"></i></button>
+                    <button type="button" class="btn btn-danger"><i
+                        class="bi bi-trash3-fill"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                  <td>
+                    <a href="../page/doc.html">
+                    <button type="button" class="btn btn-info"><i
+                        class="bi bi-eye-fill"></i>
+                    </button></a>
+                    <button type="button" class="btn btn-success"><i
+                        class="bi bi-pencil-square"></i></button>
+                    <button type="button" class="btn btn-danger"><i
+                        class="bi bi-trash3-fill"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>@social</td>
+                  <td>
+                    <a href="../page/doc.html">
+                    <button type="button" class="btn btn-info"><i
+                        class="bi bi-eye-fill"></i></button></a>
+                    <button type="button" class="btn btn-success"><i
+                        class="bi bi-pencil-square"></i></button>
+                    <button type="button" class="btn btn-danger"><i
+                        class="bi bi-trash3-fill"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
