@@ -1,0 +1,9 @@
+body{
+    background-image: url(../assets/Img/Sceptile.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
